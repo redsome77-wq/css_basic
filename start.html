@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 시작</title>
+    <!-- html 주석 -->
+    <style>
+        /* 스타일 안에서부터는 css이므로 css 주석 */
+        /* 선택자 {속성:값; 속성:값;} */
+        body {background-color: cadetblue;}
+        /* !!!! 태그 작성 순서와 동일하게 선택자 작성 !!!! */
+        /* #warp {} : 아이디 wrap을 가진 ""모든"" 대상에 디자인 적용 /// class는 "." ( ex: class="title" -> .title ) */
+        div#wrap {background-color: #eee;}
+        #wrap h1 {background-color: #f5f5f5;} /* 아이wrap 부모 안 h1 선택 */
+        #wrap h1 a {background-color: #ff0;}
+        #wrap p {background-color: #ffc;}
+        #wrap .list {background-color: aquamarine;}
+        #wrap .list li {background-color: bisque;}
+        #wrap .list li em {background-color: tomato;}
+        #wrap .list li span {background-color: yellowgreen;}
+        #wrap dl {background-color: violet;}
+        #wrap dl dt {background-color: thistle;}
+        #wrap dl dd {background-color: slateblue;}
+
+        /* 선택자 연습 */
+        #wrap {}
+        #wrap h1 {}
+        #wrap h1 a {}
+        #wrap h1+p {color: red;}
+        #wrap p {}
+        #wrap .list {}
+        #wrap .list li {}
+        #wrap .list li em {}
+        #wrap .list li span {}
+        #wrap dl {}
+        #wrap dl dt {}
+        #wrap dl dd {}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1><a href="#">logo</a></h1>
+        <p>contents</p>
+        <p>Title</p>
+        <ul class="list">
+            <li><em>2026-01-29</em></li>
+            <li>pm 12</li>
+            <li><span>new</span></li>
+        </ul>
+        <dl>
+            <dt>new item</dt>
+            <dd>ki</dd>
+            <dt>new role</dt>
+            <dd>two</dd>
+        </dl>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    background-color: #CCFFFF;
+    width: 402px; height: 100vh;
+    padding: 30px 15px;
+    text-align: center;
+    margin: 0 auto;
+}
+.wrap {}
+.wrap h2, /* 그룹선택자 (,) 기준으로 뒤 선택자 reset, 부모부터 다시쓰기 ex: .warp h2, h3 {} -> (x) h3 앞에도 .warp써주기 */
+.wrap h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.wrap h2 {}
+.wrap h2+p, .wrap h3+p /* .wrap p:nth-child(2), .wrap p:nth-child(5)도 가능 */{
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+}
+.wrap p {}
+.wrap p em {}
+.wrap h2+p em /* = .wrap p:nth-child(2) em */{
+    color: #FF0000;
+}
+.wrap #content {
+    margin:0 0 30px; /* = margin-bottom: 15px; */
+}
+.wrap #content span {
+    background-color: gold;
+}
+.wrap h3 {}
+.wrap .details {}
+.wrap .details em {}
