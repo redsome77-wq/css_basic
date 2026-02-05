@@ -1,0 +1,142 @@
+table {margin-bottom: 20px;}
+#t1 {
+    /* 테두리: 선두께 선모양 선색상 */
+    border: 1px solid #000;
+}
+#t1 tr {}
+#t1 tr:nth-child(2) {
+    background-color: bisque;
+}
+#t1 tr th:nth-child(1) {
+    border-right: 1px solid rgb(252, 38, 0);
+    padding: 30px 0 5px;
+    /* 표의 여백은 열(td, th) 적용 */
+}
+#t1 tr td {
+    border-top: 5px dotted #0004ff;
+    padding: 30px 30px;
+}
+#t2 {
+    border: 2px solid #000000;}
+#t2 tbody {
+    background-color: #c1cfe9;
+}
+#t2 tr {}
+#t2 tr th {
+    width: 300px;
+    color: #fff;
+    background-color: rgb(75, 29, 2);
+    border: 1px solid #fff;
+    padding: 20px;
+}
+#t2 tr th:nth-child(1),
+#t2 tr th:nth-child(2) {
+    width: 30px;
+}
+/* 전체 테이블 크기와 개별 열에 크기를 줬을 때 기준 */
+#t2 tr td {
+    border: 1px solid #fff;
+    padding: 20px;
+}
+/* 교보문고 도서재고 */
+#kyobo {}
+#kyobo h1 {}
+#kyobo #book {
+    background-color: antiquewhite;
+    width: 700px;
+    border-radius: 20px;
+}
+/* 공통 열 선택자 */
+#kyobo #book th,
+#kyobo #book td {padding: 15px 0;}
+
+#kyobo #book thead {}
+#kyobo #book thead tr {}
+#kyobo #book thead tr th {}
+/* 그룹선택자 적용법 */
+/* #kyobo #book thead tr th:nth-child(2),
+#kyobo #book thead tr th:nth-child(3),
+#kyobo #book thead tr th:nth-child(4),
+#kyobo #book thead tr th:nth-child(5) {width: 80px;} */
+/* 형제선택자 적용법 */
+#kyobo #book thead tr th:nth-child(1)~th {width: 80px;} /* 1은 포함이 안됨 */
+#kyobo #book tbody {}
+#kyobo #book tbody tr {}
+#kyobo #book tbody tr:nth-child(2){border:3px solid #ff0000;}
+#kyobo #book tbody tr th {
+    text-align: left;
+    padding-left: 25px;
+}
+#kyobo #book tbody tr th td {
+    text-align: center;
+}
+#wrap {
+    width: 1620px;
+    margin: 0 auto;
+    background-color: azure;
+    padding: 50px 0;
+}
+#wrap .top {
+    width: 750px;
+    margin: 0 auto;
+    background-color: aqua;
+}
+#wrap .top h1 {}
+#wrap .top p {}
+#wrap #sales {
+    background-color: rgb(186, 217, 245);
+    width: 750px;
+    margin-top: 20px;
+}
+#wrap #sales thead {
+    border: 2.5px solid #000;
+    border-left: 0;
+    border-right: 0;
+}
+#wrap #sales th,
+#wrap #sales td {padding: 10px;}
+#wrap #sales thead tr {
+}
+#wrap #sales thead tr th {
+    padding: 8px;
+}
+#wrap #sales thead tr th:nth-child(1)~th {width: 130px;}
+#wrap #sales tbody {}
+#wrap #sales tbody tr {}
+#wrap #sales tbody tr:nth-child(4) {background-color: #83b9d8;}
+#wrap #sales tbody tr th {}
+#wrap #sales tbody tr td {text-align: center;}
+#phone {}
+#phone #pay {
+    width: 1100px;
+    background-color: #e6e6e6;
+}
+#phone #pay thead {
+    border: 2.5px solid #000;
+    border-left: 0;
+    border-right: 0;
+}
+#phone #pay thead tr {
+    border: 1px dotted #bebebe;
+    border-left: 0;
+    border-right: 0;
+}
+#phone #pay thead tr th {
+    padding: 20px;
+}
+#phone #pay thead tr th em{
+    font-size: 0.75rem; color: #bebebe;
+    display: block;
+}
+#phone #pay tbody {
+    border-bottom: 2.5px solid #969696;
+}
+#phone #pay tbody tr {
+    border: 1px dotted #bebebe;
+    border-left: 0;
+    border-right: 0;
+}
+#phone #pay tbody tr th {
+        padding: 30px;
+}
+#phone #pay tbody tr td {}
