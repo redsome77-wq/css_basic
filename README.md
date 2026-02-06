@@ -91,4 +91,21 @@
     * `onclick=""` : 클릭시 "명령어" 실행 이벤트
     * `window.location.href='./result.html'`
         *(위) `a href="실행주소"`와 동일한 JS 명령어
-    * `button:hover` : 버튼에 마우스 올렸을 시 디자인 변경
+    * `button:hover {}` : 버튼에 마우스 올렸을 시 디자인 변경
+# 웹글꼴 `<link>`,`@font-face`
+## `<link>` 사용법과 특징
+* `head` 태그 안 `reset.css` 연결보다 위에 작성
+* `@font-face`에 비해 사용이 간편함.
+* 작성한 html에서만 사용할 수 있다는 단점 있음.
+## `@font-face` 사용법, 특징
+* `reset.css` 파일 내 가장 위쪽 라인에 작성
+* `@font-face {`
+    * 필수 : `font-family:''`
+    * 필수 : `src:url(글꼴주소)`
+    * 선택 : `font-weight:글꼴굵기(200~700 글꼴에 따라 다름)`
+    * 선택 : `font-style:기울기(normal, italic 등);`
+    * 선택 : `font-display:swap;`
+    * `}`
+* reset에 한번 연결해두면 모든 html에서 사용 가능
+* `@font-face {font-family:'사용할 글꼴명'}` (예) 컴퓨터 글꼴 설치
+* `선택자 {font-family: 웹글꼴로 불러온 글꼴명'}` (예) 포토샵 글꼴 사용
