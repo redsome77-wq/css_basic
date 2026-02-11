@@ -87,7 +87,7 @@
     * `input:focus {}` 입력칸 활성화 표시 디자인
 ### button
 * `<button type="button" 이벤트="자바스크립트명령어작성">`
-    * 버튼에 이벤트 작성 시 반드시 type은 button(범용기능)
+    * 버튼에 이벤트 작성 시 반드시 type은 button(범용기능)cd
     * `onclick=""` : 클릭시 "명령어" 실행 이벤트
     * `window.location.href='./result.html'`
         *(위) `a href="실행주소"`와 동일한 JS 명령어
@@ -109,3 +109,16 @@
 * reset에 한번 연결해두면 모든 html에서 사용 가능
 * `@font-face {font-family:'사용할 글꼴명'}` (예) 컴퓨터 글꼴 설치
 * `선택자 {font-family: 웹글꼴로 불러온 글꼴명'}` (예) 포토샵 글꼴 사용
+## CSS 레이아웃 정렬 속성
+### display
+* `display:block`: 인라인을 수직으로 나열
+* `display:inline-block` : 블록을 수평으로 나열
+    * 기본 여백 3px 발생 -> 해결법 `margin-right:-3px`
+### margin
+* `margin:상하여백 auto` : 크기가 설정된 블록 또는 인라인을 화면 가운데 배치
+### float
+* `float:left` : 형제 요소들을 왼쪽으로 순차정렬
+* `float:right` : 형제 요소들을 오른쪽으로 정렬
+    * 2개 이상 작성시 역순으로 정렬됨
+* `float:none` : float 제거
+* `clear:both` : 이전 형제에 작성된 float 정렬 해제

@@ -1,0 +1,76 @@
+body {
+    height: 200vh;
+    background-image:url(../imgs/sunset-sky.jpg);
+    /* 백그라운드 - 시작속성들은 배경이미지 전용 */
+    background-size: 100% auto; /* 100% auto - 뷰포트 기준 // cover - 정해진 화면사이즈를 모두 채움*/
+    /* background-repeat: no-repeat; */
+    background-position: top center;
+    background-attachment: fixed; /* 스크롤 상관없이 배경화면 고정 */
+}
+#slide_wrap {
+    width: 549px; height: 298px;
+    background-color: springgreen;
+    /* 테스트용 임시색상은 aqua 등 영문명색상. 실 디자인 사용 색상은 #헥사코드로 입력 */
+    margin: 109px auto 0;
+    /* 피그마 넘친 콘텐츠 숨기기 */
+    overflow: scroll; /* hidden(숨기기, scroll(스크롤생성, auto */
+}
+#slide_wrap .slide_container {
+    /* 너비 정하지 않으면 -> 기본 너비값 100% (부모와 같음) */
+    width: max-content; /* 자식너비만큼 */
+}
+#slide_wrap .slide_container .slide {
+    width: 549px; height: 298px;
+    display: inline-block;
+}
+#slide_wrap .slide_container .slide:nth-child(1) {
+    background-color: antiquewhite;
+}
+#slide_wrap .slide_container .slide:nth-child(2) {
+    background-color: aqua;
+}
+#slide_wrap .slide_container .slide:nth-child(3) {
+    background-color: yellow;
+}
+#slide_wrap .slide_container .slide:nth-child(4) {
+    background-color: tomato;
+}
+#slide_wrap .prev {}
+#slide_wrap .next {}
+#best_slide_wrap {
+    width: 1800px; height: 400px;
+    /* 너비의 기본값=100% 높이의 기본값(auto->hug:내용만큼 인식함. 자식에 높이값 기입했으면 안적어도 됨) */
+    background-color: brown;
+    margin: 109px auto 0;
+    /* overflow: auto; */
+}
+#best_slide_wrap h1 {}
+#best_slide_wrap .slide_container {
+    width: max-content;;
+}
+#best_slide_wrap .slide_container .slide {
+    width: 600px; height: 400px;
+    font-size: 3rem;
+    /* margin-right: -3px; */
+    /* inline-block으로 옆으로 정렬시 기본 여백 발생 -> margin-right: -3px로 여백 제거 작업 필요*/
+/* 옆으로 나열하는 레이아웃 속성(형제관계) */
+    display: inline-block;
+    float: left;
+}
+#best_slide_wrap .slide_container .slide:nth-child(1) {
+    background-color: bisque;
+}
+#best_slide_wrap .slide_container .slide:nth-child(2) {
+    background-color: blue;
+    clear: both;
+}
+#best_slide_wrap .slide_container .slide:nth-child(3) {
+    background-color: yellow;
+    /* float: none; */ /* -> float를 모두 해제함 */
+    /* clear: both; */ /* -> 이전 형제에서 온 float를 모두 해제함 */
+}
+#best_slide_wrap .slide_container .slide:nth-child(4) {
+    background-color: violet;
+}
+#best_slide_wrap .prev {}
+#best_slide_wrap .next {}
