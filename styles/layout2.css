@@ -186,11 +186,12 @@
 /* 영풍문고 오늘의 책 ------------------------------------------------ */
 #today_book {
     background-color: aqua;
-    margin: 0 auto;
     width: 1084px;
+    margin: 0 auto;
 }
 #today_book .title {
-    padding: 20px;
+    padding: 20px 0 0;
+    overflow: hidden; /* 자식 h1,more_btn float 설정으로 부모 인식을 위한 값 */
 }
 #today_book .title h1 {
     float: left;
@@ -200,18 +201,16 @@
 }
 #today_book .title .contents {
     background-color: blanchedalmond;
-    overflow: hidden;
+    overflow: hidden; /* 자식 li float 설정으로 부모 인식을 위한 값 */
     margin-top: 30px;
-    width: max-content;
-
 }
-
 #today_book .title .contents li {
+    width:calc((100% - (29.7px * 4)) / 5);
     float: left;
-    width: 193px;
-    margin-right: 10px;
+    margin-right: 29.7px;
 }
-#today_book .title .contents li:nth-child(5) {margin-right: 0;}
+/* #today_book .title .contents li:nth-child(5) {margin: 0;} */
+#today_book .title .contents li:last-child {margin: 0;}
 #today_book .title .contents li:nth-child(even) {
     background-color: aquamarine;
 }
@@ -220,32 +219,34 @@
 }
 #today_book .title .contents li .thumnaill {
     position: relative;
-    z-index:20
 }
-
 #today_book .title .contents li .thumnaill img {
-    width: 193px;
+    width: 100%; /* 이미지는 인라인이라 부모 li의 너비크기(블록)에 따라가지 않으므로 100%로 입력 */
 }
 #today_book .title .contents li .thumnaill .popup {
     position: absolute;
     top: 0; left: 0;
-    width: 193px; height: 100%;
+    height: 100%;
     background-color: rgba(0,0,0,0.5);
     padding: 20px;
+    /* 부모 썸네일 relative 기준으로 왼쪽상단 위치 같음, 가로세로 크기 같음 */
+}
+#today_book .title .contents li .thumnaill .popup * {
+    color: #fff;
 }
 #today_book .title .contents li .thumnaill .popup > a {
-    color: #fff;
     line-height: 130%;
+    background-color: chartreuse;
+    display: block; /* height: 80%; */ height: calc(100% - 40px);
 }
 #today_book .title .contents li .thumnaill .popup .v_c {
-    text-align: center;
     position: absolute;
-    color: #fff;
+    width: 100%;
     bottom: 20px;
-    z-index: 30
+    left: 0;
+    text-align: center;
 }
 #today_book .title .contents li .thumnaill .popup .v_c a {
-    color: #fff;
     border: 1px solid #fff; 
     border-radius: 10px;
     padding: 5px 7px;
