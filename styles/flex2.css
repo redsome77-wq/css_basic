@@ -1,0 +1,58 @@
+header {
+    background-color: aquamarine;
+    width: 320px; height: 150px; margin: 50px auto 0;
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    justify-content:space-between;
+    position: relative;
+}
+header > * {
+    border: 1px solid tomato;
+    width: 50px; height: 50px;
+}
+header h1 {}
+header nav {}
+header nav .gnb {
+    display: flex; flex-flow: row wrap;
+    /* 메인축, 교차축 속성 */
+}
+header nav .gnb > li {
+    font-size: 0.7rem;
+    width: 50%;
+}
+header nav .gnb > li > a {
+    background-color: bisque;
+    display: flex; flex-flow: column wrap;
+}
+header nav .gnb > li:last-child {
+    background-color: cadetblue;
+    display: flex; flex-flow: column nowrap;
+}
+header nav .gnb > li:last-child a {}
+header nav .gnb > li:last-child span {}
+header nav .gnb > li:last-child em {}
+header nav .gnb > li:first-child {
+}
+header nav .gnb > li:first-child .sub_bg {
+    background-color: whitesmoke;
+    width: 500%; height: 5000px;
+    position: absolute;
+    left:50%; top:60px;
+    transform: translateX(-50%); /* 정중앙 */
+    /* display : flex; flex-flow; clumn nowrap; align-items: center; */
+    text-align: center;
+    align-items: center;
+    padding: 30px 0;
+}
+header nav .gnb > li:first-child .sub_bg ul {
+    background-color: coral;
+    width: 150px;
+    display: inline-block;
+}
+header nav .gnb > li:first-child .sub_bg ul li {
+}
+header nav .gnb > li:first-child .sub_bg ul li a {}
+main {
+    height: 200vh;
+    background-color: yellowgreen;
+}
