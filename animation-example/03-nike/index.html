@@ -19,7 +19,6 @@
             position: absolute;
             right: 0px;
             bottom: 150px;
-            
             transform: rotate(15deg);
         }
         #v_btn {
@@ -29,8 +28,15 @@
         #v_btn a {
             width:100px; margin:0 10px; 
             display:flex; align-items:flex-end;
+            transform-origin: right bottom;
+            transition: transform 1s;
         }
+        #v_btn a:hover {
+            transform: rotate(10deg);
+        } 
         #v_btn a img {width:100%;}
+        #v_btn a:last-child {}
+        #v_btn a:last-child:hover {}
     </style>
     <script>
         window.onload=function(){

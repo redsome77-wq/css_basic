@@ -18,13 +18,49 @@
         }
         #v_btn {
             position:absolute; left:0; bottom:20px; width:100%;
-            display:flex; justify-content: center;
+            display:flex; flex-flow: row nowrap; justify-content: center;
         }
         #v_btn a {
             width:50px; margin:0 10px; 
-            display:flex; align-items:flex-end;
+            display:flex; align-items:flex-end; /* 이미지 바닥에서 띄우고 이미지 정렬기준을 바닥쪽으로 잡음 */
         }
-        #v_btn a img {width:100%;}
+        #v_btn a img {
+            width:100%;
+            transition: transform 1s;
+        }
+        /* 개별 transform 연습용 선택자 */
+        #v_btn a:first-child {
+            background-color: aqua;
+            transform: scale(1);
+            transition: transform 1s;
+        }
+        #v_btn a:first-child:hover {
+            background-color: antiquewhite;
+            transform: scale(1.1);
+        }
+        #v_btn a:nth-child(2) {
+            background-color: yellow;
+            transform: scale(1) rotate(0);
+            transition: transform 1s;
+            /* transform 기준점 바꾸기 (scale시 기본-중앙)*/
+            transform-origin: center bottom;
+        }
+        #v_btn a:nth-child(2):hover {
+            background-color: antiquewhite;
+            transform: scale(1.1) rotate(20deg);
+        }
+        #v_btn a:last-child {
+            background-color: tomato;
+            transform: skew(10deg); rotate(50deg);
+            transition: transform 1s;
+        }
+        #v_btn a:last-child:hover {
+            background-color: antiquewhite;
+            transform: skew(0); rotate(0);
+        }
+        #v_btn a:last-child:hover img {
+            transform:translateX(20px)
+        }
     </style>
     <script>
         window.onload=function(){

@@ -45,6 +45,11 @@
         nav {
             width:100%; margin:70px auto 0; background:#222;
             display:flex; justify-content:space-around;
+            /* 처음부터 화면 고정 */
+            /* position: fixed; left: 0; top:0; width: 100%; z-index: 100; */
+            /* 스크롤이동과 함께 특정 위치에 닿으면 고정 // 상단에서 떨어진 위치에 배치 -> 포지션 sticky로 이동좌표에서의 위치 작성 */
+            /* sticky 주의점 : sticky 적용대상의 부모가 전체 웹사이트 높이와 같아야함(바디 또는 #wrap 등) */
+            position: sticky; left: 0; top:0; width: 100%; z-index: 100;
         }
         nav a {position:relative; display:inline-block; line-height:60px; padding:0 20px; color:#fff; font-size:0.875rem;}
         nav a::after {/* 가상 마지막 자식 요소 */
