@@ -199,7 +199,7 @@
 * `::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}`
 * `::-webkit-scrollbar-thumb {background-color: #222;border-radius: 5px;}`
 ## transition
-* `:hovrt` 선택자로 인해 기존 속성에서 다른 속성으로 변경되는 css에 애니메이션을 주고 싶을 때
+* `:hover` 선택자로 인해 기존 속성에서 다른 속성으로 변경되는 css에 애니메이션을 주고 싶을 때
     * `선택자 {color:#000; font-size:1rem;}`
     * `선택자:hover {color:#fff;}`
     * 위 선택자 예시) color만 hover시 변경됨
@@ -228,4 +228,9 @@
 * `transform:skew(-20deg);` 
 * `transform:translate(10px, 20px);` x, y 이동순서로 작성
 * 다른 모든 속성은 중심이 왼쪽 상단. **transform만 유일하게 가운데가 기준점**
-* 기준점 변경방법 : `transform-origin: x y`
+* 기준점 변경방법 : `transform-origin: x y` 예시) `transform-origin: top center;`
+## 글자안에서 그라데이션 효과 및 배경이미지를 마스크 씌워서 보여주고 싶을 때 사용하는 속성값 모음
+`-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent;`

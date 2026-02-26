@@ -13,7 +13,8 @@
             margin:0 auto; font-weight:700; 
             font-size:5rem; text-align: center;
             background: linear-gradient(to right, #ff00ff, #00ffff, #ff00ff);
-            -webkit-background-clip: text;
+            /* webkit - 파이어폭스. 크롬 등의 브라우저에서 안전하게 속성 적용하는 웹브라우저 엔진 명령어*/
+            -webkit-background-clip: text; /* ------배경을 텍스트 영역에서만 보기 */
             -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
@@ -23,10 +24,22 @@
             text-shadow:0 0 20px rgba(255,255,255,0.2);
             font-size:10rem; text-align: center; font-weight:700; 
             background: url(https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center / cover;
+            /* 글자안에서 그라데이션 효과 및 배경이미지를 마스크 씌워서 보여주고 싶을 때 사용하는 속성값 모음 */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
+        }
+        main h3 {
+            font-family: 'pretendard';
+            text-shadow:0 0 20px rgba(255,255,255,0.2);
+            font-size:10rem; text-align: center; font-weight:900; 
+            background: url(https://plus.unsplash.com/premium_photo-1666286163385-abe05f0326c4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8JUVCJUIwJTk0JUVCJThCJUE0fGVufDB8fDB8fHww) center / cover;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            animation: moving_t_b 0.1s alternate linear infinite;
         }
         p {width:30px;}
         p img {width:100%;}
@@ -38,6 +51,15 @@
             0% {}
             100% {}
         }
+        @keyframes moving_t_b {
+            0% {transform: translateY(-5px);}
+            100% {transform: translateY(5px);}
+        }
+        @keyframes pulsing {
+            0% {transform:scale(1)}
+            100% {transform:scale(1.03)}
+        }
+
     </style>
 </head>
 <body>
@@ -45,6 +67,7 @@
         <p><img src="./images/arrow.png" alt=""></p>
         <h1>PORTFOLIO</h1>
         <h2>PROJECT</h2>
+        <h3>2026 02 26</h3>
         <p><img src="./images/arrow.png" alt=""></p>
     </main>
     <footer>

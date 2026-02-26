@@ -1,0 +1,41 @@
+@keyframes pop_right {
+    0% {transform: translateX(250px); opacity: 0;}
+    100% {transform: translateX(0); opacity: 1;}
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes passing {
+    0% {background-position-x:0;}
+    100% {background-position-x:1000px;}
+}
+@keyframes moving_t_b {
+    0% {transform: translateY(-5px);}
+    100% {transform: translateY(5px);}
+}
+/* position: 요소 움직임 */
+/* background-position :요소 안 배경 이미지 이동. 요소 고정 */
+/* background-position : x y; /// 기본형*/
+/* background-position-x : x; // x 한정형*/
+
+
+main .car #left_tire,
+main .car #right_tire {animation: rotate 1s linear infinite;}
+main .car {animation: pop_right 1s ease both;}
+
+/* 메인배경 */
+main .bg_wrap .bg {width:1400px; margin:0 auto;}
+main .bg_wrap .bg1 { /* 구름 */
+    animation: passing 100s linear infinite;
+}
+main .bg_wrap .bg2 { /* 큰건물 */
+    animation: passing 50s linear infinite;
+}
+main .bg_wrap .bg3 { /* 작은건물 */
+    animation: passing 10s linear infinite;
+}
+
+main .scroll {
+    animation: moving_t_b 1s linear alternate infinite;
+}

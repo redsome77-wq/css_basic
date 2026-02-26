@@ -29,6 +29,22 @@ main {
     top: 80px;
     text-align: center;
 }
+main::before,
+main::after {
+    content: ''; display: block; /* before, after !!!!가상요소 필수속성!!!! */
+    position: absolute; /* 형제와 겹치는 위치속성 */
+    width: 50%; height: 100%; /* 부모에 상대적인 크기 (가로세로값 다 있어야함)*/
+    z-index: 999; /* 형제와 겹치는 중첩순서 */
+    top: 0;
+}
+    main::before {
+    left: 0; /* 좌표설정 */
+    background: linear-gradient(90deg, rgb(9,13,43), transparent);
+}
+    main::after {
+    right: 0;
+    background: linear-gradient(-90deg, rgb(9,13,43), transparent);
+}
 main > * {max-width:1400px; margin:0 auto;}
 /* 중첩순서 처리 배경(10) 그라디언트(20) 나머지(30) */
 main .bg_wrap {position:absolute; z-index:10;}
@@ -53,11 +69,22 @@ main .bg_wrap .bg3 {
 main .txt {}
 /* 메인 자동차 위 리스트3 */
 /* 메인 자동차 */
-main .car {margin-top:150px; text-align:center; width:600px;}
-main .car #car {width:100%;}
+main .car {
+    margin-top:150px; text-align:center; width:600px;
+}
+main .car #car {
+    width:100%;
+}
 main .car #left_tire, main .car #right_tire {
     position:absolute; bottom:25px; width:67px;
 }
+
 main .car #left_tire {left:102px;}
 main .car #right_tire {right:91px;}
+
+footer {
+    height: 200px; color: white;
+    background: linear-gradient(40deg, purple, transparent, brown, rgb(0, 0, 0), rgba(255, 255, 255, 0.5));
+}
+
 
