@@ -1,0 +1,52 @@
+/* mobile -> pc 점점 크게 */
+#wrap {
+    background-color: rosybrown;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-width: 320px;
+    max-width: 1440px;
+}
+#wrap > * {
+    border: 1px solid #000;
+}
+#wrap header {
+    height: 60px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+}
+#wrap header h1 {}
+#wrap header nav {}
+#wrap main {
+}
+#wrap main section {
+    background-color:antiquewhite;
+    line-height: 400px; /* 높이 가운데 배치하기 -> 요소가 1줄일때만 가능*/
+    text-align: center;
+}
+#wrap main section:nth-child(1) {}
+#wrap main section:nth-child(2) {}
+#wrap footer {
+    line-height: 100px;
+    text-align: center;
+}
+@media screen and (min-width:481px) { /* 480 이상일때 */
+    #wrap {
+        padding: 0 30px;
+        min-width: 480px;
+    }
+    #wrap main {
+        display: flex; flex-flow: row nowrap;
+    }
+    #wrap main section {
+        width: 50%;
+    }
+} /* 480~819 */
+@media screen and (min-width:820px) { /* 820 이상일때 */
+    #wrap {
+        min-width: 820px;
+    }
+    #wrap header {
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+} /* 820~1440 */

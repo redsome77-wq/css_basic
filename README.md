@@ -234,3 +234,11 @@
 -webkit-text-fill-color: transparent;
 background-clip: text;
 color: transparent;`
+## 반응형웹 설정
+* 설계방향 결정 /// 1. 모바일 -> pc 점점 크게
+* ----------- /// 2. pc -> 모바일 점점 작게
+* `@keyframes 애니메이션 이름 {애니메이션 규칙}` -> animation
+* `@media screen and (규칙) {실행명령어}`
+* `@media screen and (w320~) {320 이상일때 재배열 명령어}`
+* `@media screen and (w760~) {760 이상일때 재배열 명령어}`
+* `@media 규칙괄호()` 안에는 세미콜론(;) 금지
